@@ -261,3 +261,36 @@ nav .atype:hover,.home-s2 .home-s2-header i {
     z-index: 9;
     transform: translate(-50%, -50%);
 }
+
+.rebackicondiv {
+    z-index: 9;
+    bottom: 0;
+    right: 0;
+}
+
+/* SECTION 3 */
+.s3-content-h1 {
+    font-family: "Lora", serif;
+    font-weight: 800;  
+    font-style: italic;
+    font-size: 70px;
+}
+
+.role-logo img {
+    filter: brightness(0.5);
+    width: 65px;
+}
+
+.active-role-img img{
+    filter: brightness(1);
+    width: 65px;
+}
+
+.role {
+    transition: all 0.3s ;
+}
+.home-s3 .role:hover {
+    scale:1.1;
+}
+
+
