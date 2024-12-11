@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    letter-spacing: 0.5;
 }
 
 .riot-div {
@@ -15,7 +16,7 @@
 }
 
 .riotSlideDown {
-    animation: riotslidedown 0.5s forwards;
+    animation: riotslidedown 0.4s forwards;
     transition: all 0.3s ease;
 }
 
@@ -236,6 +237,12 @@ nav .atype:hover,.home-s2 .home-s2-header i {
 }
 
 /* SECTION2 */
+.home-s2 {
+    background: url(/asstes/images/home\ s2\ bg.avif);
+    background-position: center;
+    background-size: cover;
+}
+
 .home-s2 .home-s2-header h1 {
     font-family: "Lora", serif;
     font-optical-sizing: auto;
@@ -258,30 +265,39 @@ nav .atype:hover,.home-s2 .home-s2-header i {
 .playicondiv {
     top: 50%;
     left: 50%;
-    z-index: 9;
+    z-index: 1;
     transform: translate(-50%, -50%);
 }
 
-.rebackicondiv {
-    z-index: 9;
-    bottom: 0;
-    right: 0;
+/* SECTION 3 */
+.home-s3 {
+    background: url(/asstes/images/assassin\ bg.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-/* SECTION 3 */
-.s3-content-h1 {
+.home-s3-content-h1 {
     font-family: "Lora", serif;
     font-weight: 800;  
     font-style: italic;
     font-size: 70px;
 }
 
-.role-logo img {
+.home-s3 a {
+    transition: all 0.4s ease;
+}
+
+.home-s3 a:hover, .home-s4 button:hover, .home-s5 button:hover {
+    filter: brightness(1.1);
+}
+
+.normal-role-img {
     filter: brightness(0.5);
     width: 65px;
 }
 
-.active-role-img img{
+.active-role-img{
     filter: brightness(1);
     width: 65px;
 }
@@ -289,8 +305,21 @@ nav .atype:hover,.home-s2 .home-s2-header i {
 .role {
     transition: all 0.3s ;
 }
+
 .home-s3 .role:hover {
     scale:1.1;
 }
 
+.s3-show-hero img {
+    width: 95%;
+    height: 100%;
+    padding: 40px 0 0 0;
+}
+
+/* SECTION 4 */
+.home-s4 {
+    background: url(/asstes/images/home\ s4\ bg.webp);
+    background-position: center;
+    background-size: cover;
+}
 
