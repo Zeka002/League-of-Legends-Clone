@@ -1,0 +1,175 @@
+
+.champion-s1  {
+    width: 100vw;
+    height: 65vh;
+    background-color: white;
+}
+
+.champion-s1 h5 {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.champion-s1 h1 {
+    font-family: "Salsa", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.champion-s1 p {
+    font-size: 18px;
+}
+
+
+/* Champion Section 2 */
+.champion-s2 {
+    width: 100vw;
+    height: auto;
+}
+
+.champion-s2 .champions {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.champion-s2 .champions .img {
+    width: 100%;
+    height: 100%;
+}
+
+.champion-s2 .champions .img img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.champion-s2 .name {
+    background-color: #0a1428;
+    width: 100%;
+    padding: 10px 0 0 15px;
+    bottom: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+
+.champion-s2 .name p {
+    font-size: 22px;
+    font-family: "Salsa", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.champions:hover .img img {
+    scale: 1.1;
+}
+
+.champions:hover .name {
+    filter: brightness(2);
+}
+
+
+@media screen and (min-width:1920px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        max-width: 1920px;
+    }
+}
+
+@media screen and (max-width:1500px) {
+    
+    .champion-s2 .champions {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:1300px) {
+    
+    .champion-s2 .champions {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    
+    .champion-s2 .champions {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    
+    .champion-s2 .champions {
+        height: 550px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    
+    .champion-s2 .champions {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    
+    .champion-s2 .champions {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    
+    .champion-s2 .champions {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    
+    .champion-s2 .champions {
+        height: 350px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .champion-s1 h5 {
+        font-size: 18px;
+    }
+
+    .champion-s1 p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    
+    .champion-s2 .champions {
+        height: 300px;
+    }
+
+    
+.champion-s2 .name p {
+    font-size: 18px;
+}
+
+}
+
+@media screen and (max-width:450px) {
+    
+    .champion-s2 .champions {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    
+    .champion-s2 .champions {
+        height: 200px;
+    }
+}

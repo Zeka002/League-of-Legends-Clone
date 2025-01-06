@@ -7,7 +7,7 @@
 
 .riot-div {
     display: block;
-    height: 75vh;
+    height: 490px;
     z-index: 99;
     position: absolute;
     top: 0;
@@ -83,6 +83,39 @@
     }
 }
 
+@keyframes navSlide {
+    /* 0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-1000px);
+    } */
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-1000px);
+    }
+}
+
+@keyframes dropIRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes upIRotate {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
 nav {
     z-index: 2;
     background-color: #111;;
@@ -94,15 +127,34 @@ nav .logo-home button {
     outline: none;
 }
 
-nav .logo-home a image {
-    mix-blend-mode: multiply;
+.logo-home .nav-bottom-arrow {
+    display: inline;
+}
+
+.logo-home .nav-right-arrow {
+    display: none;
+}
+
+
+.nav-lol-logo1 {
+    display: block;
+}
+
+.nav-lol-logo2 {
+    display: none;
+}
+
+nav .atype {
+    display: flex;
+    width: 68%;
+    height: 70%;
 }
 
 nav .atype a {
     letter-spacing: 1px;
     font-family: "FF Mark W05",Arial,sans-serif;
-    font-size: 14px;
     font-weight: 700;
+    font-size: 14px;
     position: relative;
     padding: 5px 15px;
     border-radius: 5px;
@@ -122,6 +174,10 @@ nav .atype a::before {
     border-radius: 15px;
 }
 
+.dropdown-a:hover {
+    color: #bd9400;
+}
+
 nav .atype a:hover {
     background-color: rgba(255, 252, 252, 0.203);
 }
@@ -132,6 +188,15 @@ nav .atype .main-a:hover:before {
 
 nav .right-btn {
     z-index: 2;
+    display: flex;
+}
+
+#navSlideIcon {
+    font-size: 18px;
+}
+
+nav .icon-bar {
+    display: none;
 }
 
 nav .right-btn .search-div {
@@ -166,9 +231,9 @@ nav .right-btn .search-div input {
     transition: all 1s ease;
 }
 
-nav .right-btn .search-div input:focus {
+/* nav .right-btn .search-div input:focus {
     width: 200px;
-}
+} */
 
 nav .right-btn .play-now {
     border-radius: 15px;
@@ -185,7 +250,7 @@ nav .atype:hover,.home-s2 .home-s2-header i {
 
 .new-hover-div, .discover-hover-div{
     display: none;
-    width: 200px;
+    width: 230px;
     background-color: #292929;
     top: 100%;
 }
@@ -202,6 +267,83 @@ nav .atype:hover,.home-s2 .home-s2-header i {
     display: flex;
 }
 
+
+/* navbar slide */
+.nav-slide {
+    width:500px;
+    height: 100vh;
+    z-index: 99;
+    position: fixed;
+    right: -1000px;
+    top: 0;
+    background-color: red;
+    overflow-y: scroll;
+}
+
+.navSlideMove {
+    animation: navSlide 0.6s forwards;
+}
+
+.nav-slide a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+
+.slide-a-div {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    padding-right: 30px;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.news-slide-down, .discover-slide-down {
+    display: none;
+}
+
+.news-slide-down a, .discover-slide-down a {
+    color: rgb(157, 157, 157);
+}
+
+.slide-a-div:hover {
+    background-color: #292929;
+}
+
+.nav-slide .slide-a-div:hover a  {
+    color:#bd9400;
+}
+
+.nav-slide-search {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+}
+
+.clean-atype {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+}
+
+.nav-slide button:hover {
+    filter: brightness(1.4);
+}
+
+.dropIAnimation {
+    animation: dropIRotate 0.6s forwards;
+}
+
+.upIanimation {
+    animation: upIRotate 0.6s forwards;
+}
+
+/* SECTION1 */
 .home-s1 {
     width: 100%;
     height: 100vh;
@@ -210,7 +352,7 @@ nav .atype:hover,.home-s2 .home-s2-header i {
 
 .home-s1 video {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -224,17 +366,17 @@ nav .atype:hover,.home-s2 .home-s2-header i {
     margin-top: 45px;
 }
 
-.hs1-btn button {
+.hs1-btn button, .hs6-btn button {
     padding: 20px 35px;
     color: black;
     background-color: #C8AA6E;
-    outline: 2px solid white;
-    border: 2px solid rgba(0, 0, 0, 0.176) ;
+    border: 2px solid rgba(0, 0, 0, 0.176);
 }
 
 .hs1-btn button:hover {
     background-color: #e7c27a;
 }
+
 
 /* SECTION2 */
 .home-s2 {
@@ -251,11 +393,12 @@ nav .atype:hover,.home-s2 .home-s2-header i {
 }
 
 .home-s2 .home-s2-img-div {
-    width: 32%;
+    width: 33%;
 }
 
 .home-s2 .home-s2-img-div img {
     transition: all 0.5s ease;
+    object-fit: cover;
 }
 
 .home-s2 .home-s2-img-div img:hover {
@@ -275,13 +418,48 @@ nav .atype:hover,.home-s2 .home-s2-header i {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    width: 100vw;
+    padding: 25px;
 }
 
-.home-s3-content-h1 {
+.hs3-2btn {
+    width:470px;
+}
+
+.hs3-2btn .firstBtn {
+    width: 300px;
+    height: 60px;
+    background-color: #C8AA6E;
+    transition: all 0.8s ;
+}
+
+.hs3-2btn .secondBtn {
+    width: 150px;
+    height: 60px;
+    transition: all 0.8s ;
+}
+
+.home-s3-content {
+    width: 50%;
+    height: auto;
+}
+
+.hs3-2btn .firstBtn:hover, .hs3-2btn .secondBtn:hover {
+    filter: brightness(1.2);
+}
+
+.home-s3-content h3 {
+    font-size: 23px;
+}
+
+.home-s3-content h1 {
     font-family: "Lora", serif;
     font-weight: 800;  
-    font-style: italic;
     font-size: 70px;
+}
+
+.home-s3-content p {
+    font-size: 18px;
 }
 
 .home-s3 a {
@@ -290,6 +468,12 @@ nav .atype:hover,.home-s2 .home-s2-header i {
 
 .home-s3 a:hover, .home-s4 button:hover, .home-s5 button:hover {
     filter: brightness(1.1);
+}
+
+.role-img-container {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
 }
 
 .normal-role-img {
@@ -306,8 +490,21 @@ nav .atype:hover,.home-s2 .home-s2-header i {
     transition: all 0.3s ;
 }
 
-.home-s3 .role:hover {
+.hs3-role-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home .role:hover {
     scale:1.1;
+}
+
+.s3-show-hero {
+    width: 50%;
+}
+
+.s3-show-hero-content {
+    margin-top: 20px;
 }
 
 .s3-show-hero img {
@@ -321,5 +518,513 @@ nav .atype:hover,.home-s2 .home-s2-header i {
     background: url(/asstes/images/home\ s4\ bg.webp);
     background-position: center;
     background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.hs4-left, .hs4-right {
+    width: 50%;
+}
+
+.hs4-right h1 {
+    font-size: 80px;
+}
+
+.hs4-right-btn button {
+    width: 180px;
+    height: 70px;
+    font-size: 20px;
+}
+/* SECTION 5 */
+.home-s5 {
+    background: url(/asstes/images/home\ s5\ bg.avif);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto;
+}
+
+.home-s5-left {
+    width: 50%;
+}
+
+.home-s5 .mode {
+    transition: all 0.3s ;
+}
+
+.home-s5-left h3 {
+    font-size: 22px;
+}
+
+.home-s5-left h1 {
+    font-size: 64px;
+}
+
+.home-s5-left p {
+    font-size: 18px;
+}
+
+.home-s5-right {
+    width: 700px;
+    height: 800px;
+}
+
+.home-s5-right h2 {
+    font-size: 30px;
+}
+
+.home-s5-vd {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+}
+
+.home-s5-vd-border {
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    border: 1px solid #bd9400;
+    margin-left:30px;
+}
+
+/* section 6 */
+.home-s6 {
+    width: 100vw;
+    height: 85vh;
+}
+
+.home-s6 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+.home-s6-content {
+    width: 200px;
+    height: 75px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-s6-content .hs6-btn {
+    width: 200px;
+    height: 70px;
+}
+
+/* section 7 */
+.h-s7-a {
+    transition: all 0.3s;
+}
+
+.h-s7-a:hover {
+    background-color:  rgba(186, 186, 186, 0.226);
+}
+
+.ft-riotLogo img {
+    filter: brightness(0.8);
+}
+
+.ft-riotLogo img:hover {
+    filter: brightness(1.2);
+}
+
+/* home section footer */
+.home-page-ft .ft-content p{
+    width: 50%;
+}
+
+/* HOME PAGE RESPONSIVE */
+
+@media screen and (min-width:1920px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    section {
+        max-width: 1920px;
+    }
+}
+
+@media screen and (max-width:1535px) {
+    nav .atype {
+        display: none;
+    }
+
+    nav .right-btn {
+        display: none;
+    }
+
+    nav .icon-bar {
+        display: block;
+    }
+
+    .nav-lol-logo1 {
+        display: none;
+    }
+    
+    .nav-lol-logo2 {
+        display: block;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    /* home-section3 */
+    .hs3-2btn {
+        flex-direction: column-reverse;
+        gap: 10px;
+    }
+
+    /* home section 5 */
+    .home-s5 {
+        flex-direction: column;
+    }
+
+    .home-s5-right {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width:1260px) {
+    .home-s7 ul, .home-page-ft .about ul {
+        flex-direction: column;
+    }
+
+    .home-s7 ul li, .home-page-ft .about ul li {
+        margin-bottom: 10px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:1250px) {
+    .home-s2 .home-s2-img-div {
+        width: 48%;
+    }
+    .h-s2-third-div {
+        display: none;
+    }
+
+    /* section3 */
+    .home-s3 {
+        flex-direction: column;
+    }
+
+    .home-s3-content {
+        width: 80vw;
+    }
+
+    .s3-show-hero {
+        width: 65%;
+    }
+
+    .s3-show-hero-content {
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .top-riot-bar {
+        display: none;
+    }
+
+    .logo-home .nav-bottom-arrow {
+        display: none;
+    }
+
+    .logo-home .nav-right-arrow {
+        display: inline;
+    }
+
+    /* home-section1 */
+    .home-s1 .lol-logo img {
+        width: 300px;
+    }
+
+    /* home section 4 */
+    .home-s4 {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        height: auto;
+    }
+
+    .hs4-left, .hs4-right {
+        width: 90%;
+    }
+
+    .hs4-left {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hs4-img {
+        width: 60%;
+    }
+
+    .hs4-right h3, .hs4-right h1, .hs4-right p {
+        text-align: center;
+    }
+
+    .hs4-right-btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hs4-right-btn button {
+        width: 150px;
+        height: 60px;
+        font-size: 16px;
+    }
+
+    /* home footer */
+    .home-page-ft .about ul  {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:967px) {
+    .hs3-2btn .firstA{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .hs3-role-container {
+        display: block;
+    }
+
+    .hs3-role-container p {
+        font-size: 16px;
+    }
+
+    .role-img-container {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .s3-show-hero {
+        width: 70%;
+    }
+
+    /* home footer */
+    .home-page-ft .ft-content p{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:750px) {
+    .home-s5-right {
+        width: 500px;
+        height: 600px;
+    }
+
+    .home-s5-vd-border {
+        width: 450px;
+        height: 450px;
+    }
+
+    .home-s5-vd {
+        width: 410px;
+        height: 410px;
+    }
+
+    
+    .home-s5-left {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:620px) {
+    /* nav-silde */
+    .nav-slide {
+        width: 100%;
+    }
+
+    /* home section3 */
+    .home-s3-content {
+        width: 100%;
+        padding: 5px;
+    }
+
+    .home-s3-content h3 {
+        font-size: 18px;
+    }
+
+    .home-s3-content h1 {
+        font-size: 50px;
+    }
+
+    .home-s3-content p {
+        font-size: 16px;
+    }
+
+    .hs3-2btn .firstBtn {
+        width: 200px;
+        text-align: center;
+    }
+
+    .hs3-2btn .firstBtn a {
+        font-size: 16px;
+    }
+
+    .s3-show-hero {
+        width: 80%;
+    }
+
+    .hs4-right .hs4-content h3 {
+        font-size: 20px;
+    }
+
+    .hs4-right .hs4-content h1 {
+        font-size: 70px;
+    }
+
+    .hs4-right .hs4-content p {
+        font-size: 16px;
+    }
+
+    .hs4-img {
+        width: 100%;
+    }
+
+    /* home section 5 */
+    .home-s5-left h3 {
+        font-size: 18px;
+    }
+    
+    .home-s5-left h1 {
+        font-size: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .home-s5-left p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .home-s5-right h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .home-s5-right p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .home-s1 {
+        height: 95vh;
+    }
+
+    .home-s1 .lol-logo img {
+        width: 250px;
+    }
+
+    .home-s2 .home-s2-img-div {
+        width: 100%;
+    }
+
+
+    /* home-section 6 */
+    .home-s6-content .hs6-btn {
+        width: 150px;
+        height: 70px;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .home-s5-right {
+        width: 90%;
+        height: 550px;
+    }
+
+    .home-s5-vd-border {
+        width: 300px;
+        height: 300px;
+        margin-left: 8px;
+    }
+    
+    .home-s5-vd {
+        width: 260px;
+        height: 260px;
+    }
+
+    .home-s5-left .mode-container p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:410px) {
+    nav .logo-home {
+        width: 180px;
+    }
+
+    nav .logo-home i {
+        font-size: 14px;
+    }
+    
+    nav .logo-home img {
+        width: 60px;
+        height: 25px;
+    }
+
+    #navSlideIcon {
+        font-size: 14px;
+    }
+
+    /* home-section 3 */
+    .s3-show-hero {
+        width: 100%;
+    }
+
+    /* home-section 1 */
+    .home-s1 .lol-logo img {
+        width: 200px;
+    }
+
+
+    .hs1-btn button {
+        width: 160px;
+        height: 60px;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* home section 5 */
+
+    .home-s5-right {
+        width: 100%;
+        height: 500px;
+    }
+
+    .home-s5-vd-border {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .home-s5-vd {
+        width: 220px;
+        height: 220px;
+    }
+
+    /* home-section 6 */
+    .home-s6-content .hs6-btn {
+        width: 100px;
+        height: 50px;
+        padding: 0;
+    }
+
+    /* home footer */
+    .home-page-ft .ft-content p{
+        width: 95%;
+        font-size: 12px;
+    }
+}

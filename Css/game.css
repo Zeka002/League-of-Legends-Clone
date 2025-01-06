@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(10, 20, 40);
+}
+
+.game-s1 {
+    width: 100vw;
+    height: 95vh;
+    display: flex; 
+    align-items: end;
+    padding: 60px 0 30px 50px;
+    background: url(/asstes/images/game-images/709c6caa7e68aa66534b91282b6f8c3012e7ec9d-3840x1168.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.game-s1 h1 {
+    /* font-size: 64px; */
+    font-family: "Libre Baskerville", serif;
+    font-weight: 900;
+    font-style:italic;
+}
+
+.game-s1 p {
+    font-size: 1rem;
+}
+
+.game-s1 button {
+    width: 160px;
+    height: 68px;
+    color: #0A1428;
+    outline: none;
+    border: none;
+    background-color: #C8AA68;
+    transition: all 0.6s ;
+    font-size: 18px;
+    font-family: sans-serif;
+    letter-spacing: 0.5;
+}
+
+.game-s1 button:hover {
+    filter: brightness(1.1);
+}
+
+/* Game section 2 */
+.game-s2 {
+    width: 100vw;
+    height: 85vh;
+    background-color: white;
+}
+
+
+.game-s2 h5 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.game-s2 h1 {
+    font-family: "Salsa", serif;
+    font-weight: 900;
+    font-style: italic;
+    margin:20px 0;
+    font-size: 64px;
+}
+
+.game-s2 p {
+    font-size: 16px;
+}
+
+/* Game Section 3 */
+.game-s3 {
+    width: 100vw;
+    height: 95vh;
+}
+
+.game-s3 img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Game Section 4 */
+.game-s4 {
+    width: 100vw;
+    height: 100vh;
+}
+
+.game-s4 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1.2);
+}
+
+.game-s4 .content {
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.game-s4 .content h1 {
+    font-family: "Salsa", serif;
+    font-weight: 900;
+    font-style: italic;
+    margin:20px 0;
+    font-size: 55px;
+}
+
+.game-s4 .content p {
+    font-size: 18px;
+}
+
+/* Game Section 5 */
+/* Game Section 6 */
+/* Game Section 7 */
+/* Game Section 8 */
+
+.game-s5, .game-s6, .game-s7, .game-s8, .game-s10 {
+    width: 100vw;
+    height: auto;
+    background-color: rgb(10, 20, 40);
+}
+
+.game-s5 .base img, .game-s6 .base img, .game-s7 .base img, .game-s8 .base img, .game-s10 .left img {
+    width: 70px;
+    height: 70px;
+}
+
+.game-s5 .gs5-left h1, .game-s6 .gs6-left h1, .game-s7 .gs7-left h1, .game-s8 .gs8-left h1, .game-s9 h1, .game-s10 .left h1 {
+    font-family: "Salsa", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.game-s5 .gs5-right h5, .game-s6 .gs6-right h5, .game-s7 .gs7-right h5, .game-s8 .gs8-right h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* Game Section 9 */
+.game-s9-bottom {
+    width: 80vw;
+}
+
+.game-s9 img {
+    width: 100%;
+    height: 100%;
+}
+
+.game-s9 hr {
+    background-color: white;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+}
+
+.game-s9 .icon {
+    gap:  30px;
+}
+
+.game-s9 .icon i {
+    font-size: 25px;
+}
+
+/* game section 10 */
+.game-s10 img {
+    width: 100%;
+    height: 100%;
+}
+
+.game-s10 .right h1 {
+    font-family: 'Roboto', serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.game-s11 {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+
+@media screen and (min-width:1820px) {
+    .game-s1 {
+        padding: 30px 70px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .game-s4 .content h1 {
+        font-size: 45px;
+    }
+
+    .game-s4 .content p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .game-s1 {
+        padding: 50px 10px 30px 20px;
+    }
+
+    /* Game section 2 */
+    .game-s2 {
+        height: 50vh;
+    }
+
+    .game-s2 h5 {
+        font-size: 20px;
+    }
+    
+    .game-s2 h1 {
+        font-size: 40px;
+    }
+    
+    .game-s2 p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .game-s5 .gs5-right p, .game-s6 .gs6-right p,.game-s7 .gs7-right p, .game-s8 .gs8-right p, .game-s9 p, .game-s10 .left p {
+        font-size: 14px;
+    }
+
+    /* game section 9 */
+
+    .game-s9 hr {
+        height: 5px;
+    }
+
+    .game-s9 .icon i {
+        font-size: 20px;
+    }
+
+    
+    .game-s9 img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .game-s10 .left img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .game-s10 .item p {
+        font-size: 10px;
+        font-weight: 400;
+    }
+}
+

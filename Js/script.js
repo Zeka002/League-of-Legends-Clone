@@ -19,7 +19,48 @@ closeRiot.addEventListener('click', function() {
 });
 
 
-// SECTION 3 (role button)
+// navbar-slide
+let navSlide = document.getElementById('navSlide');
+let navSlideIcon = document.getElementById('navSlideIcon');
+let navSLideClose = document.getElementById('navSlideClose');
+
+navSlideIcon.addEventListener('click', () => {
+    navSlide.classList.toggle('navSlideMove');
+});
+
+navSLideClose.addEventListener('click', () => {
+    navSlide.classList.toggle('navSlideMove');
+});
+
+let newsDiv = document.getElementById('newsDiv');
+let discoverDiv = document.getElementById('discoverDiv');
+let newsSlideDown = document.getElementById('newsSlideDown');
+let discoverSlideDown = document.getElementById('discoverSlideDown')
+let newsIcon = document.getElementById('newsIcon');
+let discoverIcon = document.getElementById('discoverIcon');
+
+
+newsDiv.addEventListener('click', () => {
+   if(newsSlideDown.style.display === 'none') {
+        newsSlideDown.style.display = 'block';
+        newsIcon.style.transform = 'rotate(-180deg)';
+   } else {
+        newsSlideDown.style.display = 'none';
+        newsIcon.style.transform = 'rotate(0deg)';
+   };
+});
+
+discoverDiv.addEventListener('click', () => {
+   if(discoverSlideDown.style.display === 'none') {
+        discoverSlideDown.style.display = 'block';
+        discoverIcon.style.transform = 'rotate(-180deg)';
+   } else {
+        discoverSlideDown.style.display = 'none';
+        discoverIcon.style.transform = 'rotate(0deg)';
+   };
+});
+
+// HOME SECTION 3 (role button)
 
 let assassin = document.getElementById('assassins');
 let fighter = document.getElementById('fighters');
